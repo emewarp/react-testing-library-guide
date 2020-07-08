@@ -5,7 +5,7 @@ const TestRedux = ({counter, dispatch}) => {
 
  const increment = () => dispatch({ type: 'INCREMENT' })
  const decrement = () => dispatch({ type: 'DECREMENT' })
-  
+
  return (
   <>
     <h1 data-testid="counter">{ counter }</h1>
@@ -13,6 +13,10 @@ const TestRedux = ({counter, dispatch}) => {
     <button data-testid="button-down" onClick={decrement}>Down</button>
  </>
     )
-  }
-  
-export default connect(state => ({ counter: state.count }))(TestRedux)
+  };
+
+const mapSateToProps = (state) => {
+    return({ counter: state.count })
+}
+
+export default connect(mapSateToProps)(TestRedux)

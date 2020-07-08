@@ -1,6 +1,6 @@
-import React from "react"
+import React, { createContext, useContext } from "react"
 
-export const CounterContext = React.createContext()
+export const CounterContext = createContext({});
 
 const CounterProvider = () => {
   const [counter, setCounter] = React.useState(0)
@@ -12,10 +12,10 @@ const CounterProvider = () => {
       <Counter />
     </CounterContext.Provider>
   )
-}
+};
 
-export const Counter = () => {  
-    const { counter, increment, decrement } = React.useContext(CounterContext)   
+export const Counter = () => {
+    const { counter, increment, decrement } = useContext(CounterContext)
     return (
      <>
        <h1 data-testid="counter">{ counter }</h1>

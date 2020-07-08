@@ -17,6 +17,6 @@ const TestRedux = ({counter, dispatch}) => {
 
 const mapSateToProps = (state) => {
     return({ counter: state.count })
-}
+};
 
 export default connect(mapSateToProps)(TestRedux)

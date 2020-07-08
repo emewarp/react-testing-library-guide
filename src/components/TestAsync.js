@@ -8,7 +8,7 @@ const TestAsync = () => {
       setCounter(counter + 1)
     }, 500)
   )
-  
+
 return (
   <>
     <h1 data-testid="counter">{ counter }</h1>
@@ -17,5 +17,5 @@ return (
  </>
     )
   }
-  
+
   export default TestAsync

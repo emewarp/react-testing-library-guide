@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup, fireEvent, waitForElement } from '@testing-library/react';
-import TestAsync from './TestAsync'
+import TestAsync from '../components/TestAsync'
 
 afterEach(cleanup);
   

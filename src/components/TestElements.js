@@ -2,7 +2,7 @@ import React from 'react'
 
 const TestElements = () => {
  const [counter, setCounter] = React.useState(0)
-  
+ console.log(counter)
  return (
   <>
     <h1 data-testid="counter">{ counter }</h1>

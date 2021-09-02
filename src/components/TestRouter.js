@@ -7,13 +7,14 @@ const About = () => <h1>About page</h1>
 const Home = () => <h1>Home page</h1>
 
 const Contact = () => {
+  console.log('estamos aqui o no?')
  const { name } = useParams()
 
  return <h1 data-testid="contact-name">{name}</h1>
 }
 
 const TestRouter = () => {
-    const name = 'John Doe'
+    const name = 'Martina'
     return (
     <>
     <nav data-testid="navbar">
@@ -25,7 +26,7 @@ const TestRouter = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/about:name" component={Contact} />
+        <Route path="/contact/:name" component={Contact} />
       </Switch>
     </>
   )
